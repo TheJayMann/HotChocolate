@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -11,6 +11,8 @@ using HotChocolate.Types.Relay;
 using HotChocolate.Utilities;
 
 namespace HotChocolate.Types.Projections {
+    using IHasName = HotChocolate.Language.IHasName;
+
     internal class QueryableProjectionMiddleware<T> {
         private readonly FieldDelegate _Next;
         private readonly ITypeConversion _Converter;
